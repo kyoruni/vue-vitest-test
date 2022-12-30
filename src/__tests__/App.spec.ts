@@ -9,8 +9,8 @@ describe(
       '初期値の表示内容確認',
       () => {
         const wrapper = mount(App);
-        const actual = wrapper.get('p').text();
-        const expected = '5+3=8';
+        const actual = wrapper.get('[data-test-id="answer"]').text();
+        const expected = '8';
         expect(actual).toBe(expected);
       }
     );
